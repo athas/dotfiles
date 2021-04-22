@@ -39,6 +39,7 @@ in
 
   networking.hostName = "uhyret";
   networking.nameservers = [ "192.168.1.1" ]; # Local router.
+  networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
   i18n = {
