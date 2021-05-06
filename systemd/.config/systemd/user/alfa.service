@@ -1,0 +1,8 @@
+[Unit]
+Description=Radio Alfa
+
+[Service]
+ExecStart=/run/current-system/sw/bin/mplayer http://89.249.7.68/alfa
+
+[Install]
+WantedBy=multi-user.target
