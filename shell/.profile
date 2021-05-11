@@ -29,9 +29,15 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 
 if [ -d /usr/local/cuda ]; then
-    export CPATH=$HOME/.local/include/:/usr/local/cuda/include:$CPATH
-    export LIBRARY_PATH=$HOME/.local/lib:/usr/local/cuda/lib64:$LIBRARY_PATH
-    export LD_LIBRARY_PATH=$HOME/.local/lib:/usr/local/cuda/lib64/$LD_LIBRARY_PATH
+    export CPATH=/usr/local/cuda/include:$CPATH
+    export LIBRARY_PATH=/usr/local/cuda/lib64:$LIBRARY_PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64/$LD_LIBRARY_PATH
+fi
+
+if [ -d /opt/rocm ]; then
+    export CPATH=/opt/rocm/opencl/include:$CPATH
+    export LIBRARY_PATH=/opt/rocm/opencl/lib:$LIBRARY_PATH
+    export LD_LIBRARY_PATH=/opt/rocm/opencl/lib:$LD_LIBRARY_PATH
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -75,5 +81,5 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 
 # I prefer my own scripts and programs, then those installed by cabal,
 # then system commands.
-export PATH=$HOME/.smackage/bin:$HOME/.local/bin:$HOME/.cabal/bin:$HOME/andets/:$HOME/scripts/:/usr/local/cuda/bin:/usr/sbin:/sbin:/usr/games:$PATH
+export PATH=$HOME/.ghcup/bin:$HOME/.local/bin:$HOME/.cabal/bin:$HOME/andets/:$HOME/scripts/:/usr/local/cuda/bin:/usr/sbin:/sbin:/usr/games:$PATH
 if [ -e /Users/athas/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/athas/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
