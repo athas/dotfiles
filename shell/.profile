@@ -83,3 +83,8 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 # then system commands.
 export PATH=$HOME/.ghcup/bin:$HOME/.local/bin:$HOME/.cabal/bin:$HOME/andets/:$HOME/scripts/:/usr/local/cuda/bin:/usr/sbin:/sbin:/usr/games:$PATH
 if [ -e /Users/athas/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/athas/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+if [ -d $HOME/.guix_profile ]; then
+    GUIX_PROFILE="$HOME/.guix-profile"
+    . "$GUIX_PROFILE/etc/profile"
+fi

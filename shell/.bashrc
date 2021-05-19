@@ -83,8 +83,9 @@ alias alfa='systemctl --user $(systemctl --user is-active alfa.service >/dev/nul
 
 PROMPT_COMMAND='echo -ne "\033]0;$(pwd|sed s!^$HOME!~!)\007"'
 
-# HACK
-MONO_PATH=/usr/lib/mono/fsharp/api/.NETFramework/v4.0/4.4.0.0/:$MONO_PATH
+if hostname | grep -q futharkhpa; then
+    alias emacs="emacs --user ''"
+fi
 
 # added by travis gem
 [ -f /home/athas/.travis/travis.sh ] && source /home/athas/.travis/travis.sh
