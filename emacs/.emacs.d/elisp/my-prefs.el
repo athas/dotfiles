@@ -133,8 +133,7 @@
 (with-feature
  (package)
  (add-to-list 'package-archives
-              '("melpa" . "http://melpa.org/packages/"))
- (package-initialize))
+              '("melpa" . "http://melpa.org/packages/")))
 
 ;;; Disable X-fluff and remove stuff:
 (tool-bar-mode -1)
