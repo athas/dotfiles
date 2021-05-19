@@ -92,6 +92,7 @@ in
     skype zoom-us
     libcaca # Mostly for cacaview.
     xournalpp
+    maxima
 
     memtest86plus
 

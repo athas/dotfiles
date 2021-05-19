@@ -230,14 +230,8 @@ For now, it kills all buffers in ERC-mode."
   "Automatically connects to the IRC-servers irc.quakenet.org
 and irc.freenode.net using ERC."
   (interactive)
-  ;; (irc-quakenet)
-  ;; (irc-freenode)
-  ;; (irc-oftc)
-  ;; (irc-bitlbee)
-  (znc-erc 'freenode)
+  (znc-erc 'libera)
   (znc-erc 'bitlbee)
-  (znc-erc 'synirc)
-  ; (znc-erc 'efnet)
   )
 
 ;; Set up highlight-options:
