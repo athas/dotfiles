@@ -69,7 +69,7 @@ in
     wget curl git glxinfo emacs file htop tree coreutils-full autossh stow
     killall pass pinentry-curses zip unzip lz4 nmap sshfs ranger neofetch xdg_utils pstree
     texlive.combined.scheme-full groff imagemagick ott graphviz gnuplot
-    evince firefox-esr mplayer gimp inkscape gnupg feh imv
+    evince firefox mplayer gimp inkscape gnupg feh imv
     pandoc
     sway dmenu bemenu xwayland alacritty wl-clipboard grim slurp
     numix-cursor-theme xorg.xcursorthemes hicolor_icon_theme
