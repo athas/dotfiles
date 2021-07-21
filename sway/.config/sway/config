@@ -167,3 +167,5 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+for_window [title="Firefox.*Sharing Indicator.*"] floating enable;

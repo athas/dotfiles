@@ -114,6 +114,7 @@ in
     fsharp
     cachix
     ascii
+    hyperfine
 
     libGL_driver
     lynx
