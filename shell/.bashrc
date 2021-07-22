@@ -80,6 +80,7 @@ alias .....='.... && ..'
 alias ......='..... && ..'
 alias .......='...... && ..'
 alias alfa='systemctl --user $(systemctl --user is-active alfa.service >/dev/null && echo stop || echo start) alfa.service'
+alias ku='sshpass -f$HOME/.kupass'
 
 PROMPT_COMMAND='echo -ne "\033]0;$(pwd|sed s!^$HOME!~!)\007"'
 

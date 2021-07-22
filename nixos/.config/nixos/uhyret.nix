@@ -67,7 +67,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget curl git glxinfo emacs file htop tree coreutils-full autossh stow
-    killall pass pinentry-curses zip unzip lz4 nmap sshfs ranger neofetch xdg_utils pstree
+    killall pass pinentry-curses zip unzip lz4 nmap sshfs sshpass ranger neofetch xdg_utils pstree
     texlive.combined.scheme-full groff imagemagick ott graphviz gnuplot
     evince firefox mplayer gimp inkscape gnupg feh imv
     pandoc
