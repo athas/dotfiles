@@ -50,7 +50,7 @@ if [ $(hostname) = uhyret ]; then
 fi
 
 if [ $(uname) = Darwin ]; then
-    PATH=/Users/athas/Library/Python/3.7/bin:$PATH
+    PATH=/Users/athas/Library/Python/3.9/bin:$PATH
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
