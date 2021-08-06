@@ -9,7 +9,7 @@ set $term alacritty
 # Note: it's recommended that you pass the final command to sway
 set $menu bemenu-run | xargs swaymsg exec
 # Scaling factor - higher than 1 for HiDPI displays.
-output DP-1 scale 2 res 5120x2160
+output DP-1 scale 2 res 5120x2160 bg #000000 solid_color
 # seat seat0 xcursor_theme default 48
 
 ### Input configuration
@@ -150,6 +150,19 @@ bindsym Control+Mod1+Down focus down
 bindsym Control+Mod1+Up focus up
 bindsym Control+Mod1+Right focus right
 
+set $active_bg #a06e00
+set $active_fg #000000
+set $inactive_bg #000000
+set $inactive_fg #a06e00
+
+#
+# Border
+#
+default_border normal 1
+client.focused $active_bg $active_bg $active_fg $active_bg $active_bg
+client.focused_inactive $inactive_bg $inactive_bg $inactive_fg $inactive_bg $inactive_bg
+client.unfocused $inactive_bg $inactive_bg $inactive_fg $inactive_bg $inactive_bg
+
 #
 # Status Bar:
 #
@@ -162,9 +175,10 @@ bar {
     status_command while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        statusline $active_bg
+        background $active_fg
+        focused_workspace $active_bg $active_bg $active_fg
+        inactive_workspace $active_fg $active_fg $active_bg
     }
 }
 
