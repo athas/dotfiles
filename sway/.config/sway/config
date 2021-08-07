@@ -150,6 +150,9 @@ bindsym Control+Mod1+Down focus down
 bindsym Control+Mod1+Up focus up
 bindsym Control+Mod1+Right focus right
 
+# Delete window on middle click.
+bindsym button2 kill
+
 set $active_bg #a06e00
 set $active_fg #000000
 set $inactive_bg #000000
@@ -179,6 +182,7 @@ bar {
         background $active_fg
         focused_workspace $active_bg $active_bg $active_fg
         inactive_workspace $active_fg $active_fg $active_bg
+        binding_mode $active_bg $active_bg $active_fg
     }
 }
 
